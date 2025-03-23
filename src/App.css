@@ -1,0 +1,60 @@
+/* Heading */
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* Adjust as needed */
+}
+
+/* Text Area */
+
+
+
+/* Footer */
+
+
+
+
+/* Style for the input container */
+.form-container {
+  position: fixed;  /* Fix the form to the bottom */
+  bottom: 0;        /* Align it to the bottom */
+  left: 0;          /* Align it to the left */
+  width: 100%;      /* Make it span the whole width */
+  display: flex;    /* Use Flexbox to center the form */
+  justify-content: center;  /* Center horizontally */
+  background-color: #fff;  /* Optional: Add background */
+  padding: 10px;    /* Optional: Padding to give some space */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Shadow for a nicer look */
+}
+
+form {
+  width: 60%;       /* Adjust the width as needed for smaller size */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style for the input box */
+input[type="text"] {
+  width: 80%;       /* Make input take most of the space */
+  padding: 10px;    /* Add padding inside the input */
+  font-size: 14px;  /* Smaller font size */
+  border: 1px solid #ccc; /* Border for the input */
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}
+
+/* Style for the button */
+button {
+  padding: 10px 20px;  /* Button padding */
+  font-size: 14px;      /* Smaller button text size */
+  border: none;         /* Remove default border */
+  background-color: #007bff; /* Button color */
+  color: white;         /* Button text color */
+  border-radius: 5px;   /* Rounded button corners */
+  cursor: pointer;      /* Pointer cursor on hover */
+}
+
+button:hover {
+  background-color: #0056b3;  /* Darker color on hover */
+}
