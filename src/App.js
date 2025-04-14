@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import './App.css';
+import ReactMarkdown from 'react-markdown';
 
 const ChatApp = () => {
   const [messages, setMessages] = useState([
     { role: "assistant", content: "Welcome to DivineAI! I'm here to help with faith and spiritual questions. Feel free to ask!" },
   ]);
   const [input, setInput] = useState("");
+
+  const messagesEndRef = useRef(null);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   const getSummary = async (userMessage) => {
     const updatedMessages = [...messages, { role: "user", content: userMessage }];
@@ -35,12 +42,16 @@ const ChatApp = () => {
   return (
     <div>
       <h1 className="title-container">DivineAI</h1>
-      <div>
+      <div className="chat-container">
         {messages.map((msg, index) => (
-          <p key={index} className={msg.role}>
-            <strong>{msg.role === "user" ? "You" : "DivineAI"}:</strong> {msg.content}
-          </p>
+          <div key={index} className={msg.role}>
+            <div className="message">
+            <strong>{msg.role === "user" ? "You" : "DivineAI"}:</strong>
+            <div className="markdown"><ReactMarkdown>{msg.content}</ReactMarkdown></div>
+            </div>
+        </div>
         ))}
+        <div ref={messagesEndRef} />
       </div>
       {/* Form at the bottom */}
       <div className="form-container">
