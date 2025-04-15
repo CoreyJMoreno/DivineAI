@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import './App.css';
 import ReactMarkdown from 'react-markdown';
+const dotenv = require("dotenv");
 
 const ChatApp = () => {
   const [messages, setMessages] = useState([
@@ -9,6 +10,8 @@ const ChatApp = () => {
   const [input, setInput] = useState("");
 
   const messagesEndRef = useRef(null);
+
+  const ipAddress = process.env.REACT_APP_IP_ADDRESS + "/chat";
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -19,7 +22,7 @@ const ChatApp = () => {
     setMessages(updatedMessages);
 
     try {
-      const response = await fetch("http://localhost:5000/chat", {
+      const response = await fetch(ipAddress, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: updatedMessages }),
