@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import './App.css';
 import ReactMarkdown from 'react-markdown';
-const dotenv = require("dotenv");
+// const dotenv = require("dotenv");
 
 const ChatApp = () => {
   const [messages, setMessages] = useState([
@@ -11,7 +11,7 @@ const ChatApp = () => {
 
   const messagesEndRef = useRef(null);
 
-  const ipAddress = process.env.REACT_APP_IP_ADDRESS + "/chat";
+  // const ipAddress = process.env.REACT_APP_IP_ADDRESS + "/chat";
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -22,7 +22,7 @@ const ChatApp = () => {
     setMessages(updatedMessages);
 
     try {
-      const response = await fetch(ipAddress, {
+      const response = await fetch("https://divineai.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: updatedMessages }),
