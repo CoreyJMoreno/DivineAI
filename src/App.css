@@ -147,12 +147,12 @@ button:hover {
   }
 
   .form-container {
-    padding-bottom: 70px;
+    padding-bottom: 50px;
   }
 
   .chat-container {
     width: 85%; 
-    max-height: 60vh;
+    max-height: 55vh;
   }
 }
 
