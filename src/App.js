@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 
 const ChatApp = () => {
   const [messages, setMessages] = useState([
-    { role: "assistant", content: "Welcome to DivineAI! I'm here to help with faith and spiritual questions. Feel free to ask!" },
+    { role: "assistant", content: "🙏 Welcome to DivineAI. \n I'm here to help guide you through your questions about faith, spirituality, and religion — no matter where you're coming from or what you're searching for. Whether you're looking for comfort, clarity, scripture, or simply a space to reflect, you're not alone. \n Ask me anything!" },
   ]);
   const [input, setInput] = useState("");
 
