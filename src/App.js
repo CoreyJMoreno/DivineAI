@@ -43,7 +43,7 @@ const ChatApp = () => {
   };
 
   return (
-    <div>
+    <div className="homeArea">
       <h1 className="title-container">DivineAI</h1>
       <div className="chat-container">
         {messages.map((msg, index) => (

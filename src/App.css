@@ -4,6 +4,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.homeArea {
+  max-height: 100vh;
+}
+
 
 /* Heading */
 .title-container {
@@ -16,7 +20,7 @@ body {
 /* Text Area */
 
 .chat-container {
-  max-height: 60vh;
+  max-height: 70vh;
   width: 60%;
   margin: 1rem auto;
   overflow-y: auto;
@@ -45,6 +49,7 @@ body {
   background-color: #3a94fa;
   margin-left: auto;
   border-bottom-right-radius: 0;
+  text-align: left;
 }
 
 /* Assistant message - aligned left */
@@ -86,7 +91,7 @@ body {
   background-color: #c5eafe;  /* Optional: Add background */
   padding: 10px;    /* Optional: Padding to give some space */
   /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); Optional: Shadow for a nicer look */
-  padding-bottom: 135px;
+  padding-bottom: 105px;
 }
 
 
