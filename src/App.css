@@ -82,21 +82,19 @@ body {
 
 /* Style for the input container */
 .form-container {
-  position: fixed;  /* Fix the form to the bottom */
-  bottom: 0;        /* Align it to the bottom */
-  left: 0;          /* Align it to the left */
-  width: 100%;      /* Make it span the whole width */
-  display: flex;    /* Use Flexbox to center the form */
-  justify-content: center;  /* Center horizontally */
-  background-color: #c5eafe;  /* Optional: Add background */
-  padding: 10px;    /* Optional: Padding to give some space */
-  /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); Optional: Shadow for a nicer look */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #c5eafe;
+  padding: 10px;
   padding-bottom: 105px;
 }
 
-
 form {
-  width: 60%;       /* Adjust the width as needed for smaller size */
+  width: 60%; 
   display: flex;
   justify-content: space-between;
 }
@@ -125,6 +123,36 @@ button {
 
 button:hover {
   background-color: #0056b3;  /* Darker color on hover */
+}
+
+@media screen and (max-width: 390px) and (max-height: 844px) {
+  button {
+    padding: 10px 10px;  /* Button padding */
+    font-size: 16px;      /* Smaller button text size */
+    border: none;         /* Remove default border */
+    background-color: #007bff; /* Button color */
+    color: white;         /* Button text color */
+    border-radius: 5px;   /* Rounded button corners */
+    cursor: pointer;      /* Pointer cursor on hover */
+  }
+
+  form {
+    width: 90%;;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input[type="text"] {
+    font-size: 16px;
+  }
+
+  .form-container {
+    padding-bottom: 70px;
+  }
+
+  .chat-container {
+    width: 85%; 
+  }
 }
 
 
